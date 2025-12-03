@@ -2,38 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List with Daily Tasks</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="app">
 
-    <div class="container">
-        <h2>My Tasks</h2>
+        <h1>Task Manager</h1>
 
-        <!-- One-time tasks section -->
-        <div class="section">
-            <h3>To-Do List</h3>
-            <div class="input-row">
-                <input type="text" id="taskInput" placeholder="Add a one-time task">
-                <button onclick="addTask()">Add</button>
+        <!-- MAIN TODO LIST -->
+        <section class="box">
+            <h2>To-Do List</h2>
+            <div class="row">
+                <input type="text" id="todo-input" placeholder="Normal tasks here...">
+                <button onclick="addTask('todo')">Add</button>
             </div>
-            <ul id="taskList"></ul>
-        </div>
+            <ul id="todo-list"></ul>
+        </section>
 
-        <hr>
-
-        <!-- Daily tasks section -->
-        <div class="section">
-            <h3>Daily Tasks</h3>
-            <div class="input-row">
-                <input type="text" id="dailyInput" placeholder="Add a daily routine task">
-                <button onclick="addDailyTask()">Add</button>
+        <!-- DAILY TASKS -->
+        <section class="box">
+            <h2>Daily Tasks</h2>
+            <div class="row">
+                <input type="text" id="daily-input" placeholder="Daily tasks here...">
+                <button onclick="addTask('daily')">Add</button>
             </div>
-            <ul id="dailyList"></ul>
-        </div>
+            <ul id="daily-list"></ul>
+        </section>
+
+        <!-- MONTHLY TASKS -->
+        <section class="box">
+            <h2>Monthly Bills & Payments</h2>
+            <div class="row">
+                <input type="text" id="monthly-input" placeholder="Monthly payments here...">
+                <button onclick="addTask('monthly')">Add</button>
+            </div>
+            <ul id="monthly-list"></ul>
+        </section>
+
     </div>
 
     <script src="script.js"></script>

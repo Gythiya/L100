@@ -1,120 +1,98 @@
-/* Background + center top */
 body {
+    background: #1a1a1a;
     font-family: Arial, sans-serif;
-    background: #8B0000;
-    /* Dark Red */
-    display: flex;
-    justify-content: center;
-    /* center horizontally */
-    align-items: flex-start;
-    /* stay near top */
-    height: 100vh;
-    margin: 0;
-    padding-top: 40px;
-    /* little gap from top */
+    color: #fff;
 }
 
-/* Main card */
-.container {
-    background: white;
-    width: 420px;
+.app {
+    max-width: 700px;
+    background: #2b2b2b;
+    margin: 30px auto;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    border: 2px solid #4a4a4a;
 }
 
-/* Titles */
-h2 {
+h1 {
     text-align: center;
-    margin-bottom: 10px;
-    color: #8B0000;
+    margin: 0 0 20px;
+    color: #ffb3b3;
 }
 
-.section h3 {
-    margin: 10px 0;
-    color: #333;
+.box {
+    background: #550000;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #802020;
 }
 
-/* Input + button row */
-.input-row {
+h2 {
+    margin: 0 0 10px;
+    color: #ffd4d4;
+}
+
+.row {
     display: flex;
     gap: 10px;
-    margin-top: 5px;
+    margin-bottom: 12px;
 }
 
-input {
+.row input {
     flex: 1;
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #232323;
+    color: #fff;
 }
 
-button {
-    padding: 10px 14px;
+.row button {
+    padding: 8px 15px;
+    background: #ff3333;
     border: none;
-    background: #8B0000;
     color: white;
-    font-size: 14px;
-    border-radius: 6px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
-button:hover {
-    background: #b30000;
+.row button:hover {
+    background: #ff4d4d;
 }
 
-/* Line between sections */
-hr {
-    margin: 20px 0;
-    border: none;
-    border-top: 1px solid #ddd;
-}
-
-/* Lists */
 ul {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    margin: 0;
 }
 
 li {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-top: 8px;
-    border-radius: 6px;
-    font-size: 15px;
+    background: #2f2f2f;
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Green tick button for one-time tasks (delete) */
-.tick-btn {
-    background: #009933;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
-    border: none;
-}
-
-.tick-btn:hover {
-    background: #00cc44;
-}
-
-/* Daily task layout */
-.daily-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Completed text style (used in daily tasks) */
 .completed {
     text-decoration: line-through;
     color: #777;
+}
+
+.tick,
+.delete {
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: 8px;
+}
+
+.tick {
+    color: #00e676;
+}
+
+.delete {
+    color: #ff8a80;
 }
