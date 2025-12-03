@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #8B0000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 60px;
+}
+
+
+/* Main card */
+.container {
+    background: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #8B0000;
+}
+
+/* Input and Add button side by side */
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    font-size: 15px;
+    border: 2px solid #bbb;
+    border-radius: 6px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    background: #8B0000;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b30000;
+}
+
+/* Task Box */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 18px;
+}
+
+li {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Green ✓ remove button */
+.tick-btn {
+    background: #009933;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tick-btn:hover {
+    background: #00cc44;
+}
