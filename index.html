@@ -4,21 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>To-Do List with Daily Tasks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h2>To-Do List</h2>
+        <h2>My Tasks</h2>
 
-        <div class="input-row">
-            <input type="text" id="taskInput" placeholder="Enter a task">
-            <button onclick="addTask()">Add</button>
+        <!-- One-time tasks section -->
+        <div class="section">
+            <h3>To-Do List</h3>
+            <div class="input-row">
+                <input type="text" id="taskInput" placeholder="Add a one-time task">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="taskList"></ul>
         </div>
 
-        <ul id="taskList"></ul>
+        <hr>
+
+        <!-- Daily tasks section -->
+        <div class="section">
+            <h3>Daily Tasks</h3>
+            <div class="input-row">
+                <input type="text" id="dailyInput" placeholder="Add a daily routine task">
+                <button onclick="addDailyTask()">Add</button>
+            </div>
+            <ul id="dailyList"></ul>
+        </div>
     </div>
 
     <script src="script.js"></script>

@@ -1,51 +1,61 @@
+/* Background + center top */
 body {
     font-family: Arial, sans-serif;
     background: #8B0000;
+    /* Dark Red */
     display: flex;
     justify-content: center;
+    /* center horizontally */
     align-items: flex-start;
+    /* stay near top */
     height: 100vh;
     margin: 0;
-    padding-top: 60px;
+    padding-top: 40px;
+    /* little gap from top */
 }
-
 
 /* Main card */
 .container {
     background: white;
-    width: 400px;
+    width: 420px;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
 }
 
-/* Title */
+/* Titles */
 h2 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #8B0000;
 }
 
-/* Input and Add button side by side */
+.section h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Input + button row */
 .input-row {
     display: flex;
     gap: 10px;
+    margin-top: 5px;
 }
 
 input {
     flex: 1;
-    padding: 12px;
-    font-size: 15px;
-    border: 2px solid #bbb;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
     border-radius: 6px;
 }
 
 button {
-    padding: 12px 18px;
+    padding: 10px 14px;
     border: none;
     background: #8B0000;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -54,36 +64,57 @@ button:hover {
     background: #b30000;
 }
 
-/* Task Box */
+/* Line between sections */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Lists */
 ul {
     list-style: none;
     padding: 0;
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
 li {
     background: #f8f8f8;
     border: 1px solid #ddd;
-    padding: 12px;
-    margin-top: 10px;
+    padding: 10px;
+    margin-top: 8px;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Green ✓ remove button */
+/* Green tick button for one-time tasks (delete) */
 .tick-btn {
     background: #009933;
     color: white;
     padding: 5px 10px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
+    border: none;
 }
 
 .tick-btn:hover {
     background: #00cc44;
+}
+
+/* Daily task layout */
+.daily-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Completed text style (used in daily tasks) */
+.completed {
+    text-decoration: line-through;
+    color: #777;
 }
