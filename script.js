@@ -5,12 +5,15 @@ function addTask() {
     if (taskText === "") return;
 
     const li = document.createElement("li");
-    li.textContent = taskText;
-
-    li.onclick = function () {
-        li.remove();
-    };
+    li.innerHTML = `
+        ${taskText}
+        <button class="tick-btn" onclick="removeTask(this)">✔</button>
+    `;
 
     document.getElementById("taskList").appendChild(li);
     input.value = "";
+}
+
+function removeTask(element) {
+    element.parentElement.remove();
 }
