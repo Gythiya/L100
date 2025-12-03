@@ -1,45 +1,41 @@
-// One-time To-Do list: tick = remove
-function addTask() {
-    const input = document.getElementById("taskInput");
-    const taskText = input.value.trim();
+function addTask(type) {
+    const inputId = type + "-input";
+    const listId = type + "-list";
 
-    if (taskText === "") return;
-
-    const li = document.createElement("li");
-    li.innerHTML = `
-        <span class="task-text">${taskText}</span>
-        <button class="tick-btn" onclick="removeTask(this)">✔</button>
-    `;
-
-    document.getElementById("taskList").appendChild(li);
-    input.value = "";
-}
-
-function removeTask(element) {
-    element.parentElement.remove();
-}
-
-// Daily tasks: tick = mark completed, but item stays
-function addDailyTask() {
-    const input = document.getElementById("dailyInput");
-    const taskText = input.value.trim();
-
-    if (taskText === "") return;
+    const input = document.getElementById(inputId);
+    const text = input.value.trim();
+    if (!text) return;
 
     const li = document.createElement("li");
     li.innerHTML = `
-        <div class="daily-left">
-            <input type="checkbox" onchange="toggleDailyComplete(this)">
-            <span class="task-text">${taskText}</span>
-        </div>
-    `;
+    <span class="task">${text}</span>
+    <div>
+      <span class="tick">✔</span>
+      <span class="delete">✖</span>
+    </div>
+  `;
 
-    document.getElementById("dailyList").appendChild(li);
+    const tick = li.querySelector(".tick");
+    const del = li.querySelector(".delete");
+    const taskText = li.querySelector(".task");
+
+    tick.addEventListener("click", () => {
+        taskText.classList.toggle("completed");
+    });
+
+    del.addEventListener("click", () => {
+        li.remove();
+    });
+
+    document.getElementById(listId).appendChild(li);
     input.value = "";
+    input.focus();
 }
 
-function toggleDailyComplete(checkbox) {
-    const textSpan = checkbox.nextElementSibling;
-    if (!textSpan) return;
-    textSpan.classList.toggle("completed", checkbox.checked);
-}
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        if (document.activeElement.id === "todo-input") addTask('todo');
+        if (document.activeElement.id === "daily-input") addTask('daily');
+        if (document.activeElement.id === "monthly-input") addTask('monthly');
+    }
+});
