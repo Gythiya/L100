@@ -1,2 +1,8 @@
 hello world
 this is the project
+
+
+
+
+i am final year student
+//line 7 is added 
