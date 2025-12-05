@@ -7,7 +7,5 @@ this is the project
 
 changed for checking the role of fetch
 commit -a working 
-still
-
 
 //
